@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEO HTML5 Page with Media and Forms</title>
+  <meta name="description" content="An enhanced semantic HTML5 page example with lists, tables, media, and an accessible form with built-in validation." />
+</head>
+<body>
+  <header role="banner">
+    <h1>MJENGO Website</h1>
+    <p>Your gateway to optimized and accessible web design.</p>
+  </header>
+
+  <nav role="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="#welcome" aria-current="page">Welcome</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content" role="main">
+
+    <section id="welcome" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Welcome to Our Website</h2>
+      <p>We provide high-quality information and services designed to enrich your web experience with accessible and semantic HTML5.</p>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Us</h2>
+      <p>Our mission is to promote best practices in web development, focusing on accessibility, usability, and SEO-friendly content structure.</p>
+    </section>
+
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Our Services</h2>
+      <ul>
+        <li>
+          <strong>Consulting:</strong> Expert advice on implementing semantic HTML and accessible design strategies tailored to your project needs.
+        </li>
+        <li>
+          <strong>Training:</strong> Hands-on workshops and courses to help your team master accessible and SEO-friendly web development techniques.
+        </li>
+        <li>
+          <strong>Support:</strong> Ongoing assistance ensuring your website stays accessible and optimized.
+        </li>
+      </ul>
+      <table summary="Comparison of our three main service offerings">
+        <caption>Service Features Comparison</caption>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Consulting</th>
+            <th>Training</th>
+            <th>Support</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Customised Plans</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+          </tr>
+          <tr>
+            <td>Hands-on Workshops</td>
+            <td>✖️</td>
+            <td>✔️</td>
+            <td>✖️</td>
+          </tr>
+          <tr>
+            <td>Ongoing Support</td>
+            <td>✖️</td>
+            <td>✖️</td>
+            <td>✔️</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Media Content</h2>
+      <figure>
+        <img src="https://via.placeholder.com/600x300" alt="Example of accessible web design" width="600" height="300" />
+        <figcaption>An example image showcasing our accessible design approach.</figcaption>
+      </figure>
+
+      <figure>
+        <video controls width="600" height="340" aria-describedby="video-desc">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figcaption id="video-desc">A short video about our latest accessible web design workshop.</figcaption>
+      </figure>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <form action="/submit-contact" method="post" novalidate>
+        <label for="name">Full Name <sup aria-label="required">*</sup></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="2"
+          maxlength="50"
+          placeholder="Your full name"
+          aria-required="true"
+        />
+
+        <label for="email">Email Address <sup aria-label="required">*</sup></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          aria-required="true"
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="^\+?\d{1,4}[\d\s\-]{5,15}$"
+          placeholder="+123 456 7890"
+          aria-describedby="phone-desc"
+        />
+        <small id="phone-desc">Format: optional country code and 5-15 digits/spaces/dashes</small>
+
+        <label for="service">Preferred Service</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="consulting">Consulting</option>
+          <option value="training">Training</option>
+          <option value="support">Support</option>
+        </select>
+
+        <label for="message">Your Message <sup aria-label="required">*</sup></label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Type your message here..."
+          minlength="10"
+        ></textarea>
+
+        <label>
+          <input type="checkbox" name="terms" required aria-required="true" />
+          I agree to the <a href="/terms" target="_blank" rel="noopener">terms and conditions</a>
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 MJENGO Website. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:mjengoa@frica.com">mjengoa@frica.com</a></p>
+  </footer>
+</body>
+</html>
